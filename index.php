@@ -118,7 +118,7 @@ if ($filename==NULL) {
             // Get the post image url.
             $post_image = get_post_image_url( $post['fname'] ) ?: get_twitter_profile_img($post_author_twitter);
 
-            if ($post_status == 'draft') continue;
+            if ($post_status == 'draft' || $post_status == 'hidden') continue;
 
             // Get the milti-post template file.
             include $posts_file;
